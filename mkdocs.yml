@@ -2,7 +2,7 @@ site_name: Frontend Development Notes
 site_description: Frontend Development Learning Notes and Documentation
 site_author: Yalin(Eric) Yang
 site_url: https://gisyaliny.github.io/Frontend/
-copyright: "Copyright &copy; 2024 - 2025 Yalin Yang"
+copyright: Copyright &copy; 2024 - 2025 Yalin Yang
 
 # Repository
 repo_name: gisyaliny/Frontend
@@ -10,42 +10,41 @@ repo_url: https://github.com/gisyaliny/Frontend
 
 # Configuration
 theme:
-    language: en
     name: material
+    language: en
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.sections
+        - navigation.top
+        - navigation.footer
+        - search.highlight
+        - search.share
+        - content.code.copy
     palette:
         - scheme: default
+          primary: indigo
           accent: indigo
           toggle:
-              icon: material/toggle-switch-off-outline
+              icon: material/brightness-7
               name: Switch to dark mode
         - scheme: slate
           primary: indigo
           accent: indigo
           toggle:
-              icon: material/toggle-switch
+              icon: material/brightness-4
               name: Switch to light mode
-    features:
-        - navigation.instant
-        - navigation.tracking
-        - navigation.top
-        - navigation.sections
-        - search.highlight
-        - search.share
-        - content.code.copy
-        - content.code.annotate
-    font:
-        text: Google Sans
-        code: Regular
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/gisyaliny/Frontend
+        - icon: fontawesome/brands/linkedin
+          link: https://www.linkedin.com/in/gisyaliny/
+    generator: false  # Disable "Made with Material for MkDocs" footer text
 
 extra_css:
     - stylesheets/extra.css
-
-extra:
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/gisyaliny/Frontend
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/gisyaliny/
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -54,30 +53,20 @@ extra_javascript:
 
 markdown_extensions:
     - admonition
-    - abbr
     - attr_list
     - def_list
     - footnotes
-    - meta
     - md_in_html
-    - pymdownx.details
-    - pymdownx.mark
-    - pymdownx.superfences:
-        custom_fences:
-          - name: mermaid
-            class: mermaid
-    - pymdownx.highlight:
-          linenums: true
-          anchor_linenums: true
-          line_spans: __span
-          pygments_lang_class: true
     - toc:
           permalink: true
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.superfences
+    - pymdownx.details
+    - pymdownx.mark
   
 plugins:
     - search
-    - git-revision-date
-    - open-in-new-tab
     - git-revision-date-localized:
           enable_creation_date: true
           type: timeago
