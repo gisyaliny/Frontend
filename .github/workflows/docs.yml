@@ -6,6 +6,13 @@ on:
     pull_request:
         branches:
             - main
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+    contents: write
+    pages: write
+    id-token: write
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
@@ -24,5 +31,11 @@ jobs:
                   pip install mkdocs-git-revision-date-plugin
                   pip install mkdocs-git-revision-date-localized-plugin
                   pip install mkdocs-open-in-new-tab
+            - name: Configure Git
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
             - name: Deploy Documentation
               run: mkdocs gh-deploy --force
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

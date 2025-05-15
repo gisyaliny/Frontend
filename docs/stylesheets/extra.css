@@ -1,36 +1,54 @@
-/* Fix footer spacing */
+/* Fix footer spacing and positioning */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.md-main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.md-main__inner {
+    flex: 1 0 auto;
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+}
+
+.md-content {
+    flex: 1 0 auto;
+}
+
+/* Footer positioning */
 .md-footer {
-    margin-top: 0 !important;
+    position: relative;
+    margin-top: auto !important;
+    flex-shrink: 0;
 }
 
 .md-footer-meta {
     background-color: var(--md-footer-bg-color--dark);
 }
 
+.md-footer-meta__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+/* Remove any bottom margin from last element in content */
+.md-content__inner > :last-child {
+    margin-bottom: 0;
+}
+
 /* Improve code block appearance */
 .highlight {
     background-color: var(--md-code-bg-color);
     border-radius: 4px;
-}
-
-/* Fix content spacing */
-.md-main__inner {
-    margin-bottom: 0;
-}
-
-.md-content {
-    min-height: calc(100vh - 300px);
-}
-
-/* Remove extra space after footer */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.md-main {
-    flex: 1;
 }
 
 /* Improve table appearance */
@@ -49,4 +67,16 @@ body {
 /* Fix code block padding */
 .md-typeset pre > code {
     padding: 1em;
+}
+
+/* Ensure content fills available space */
+.md-grid {
+    max-width: 61rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Fix navigation height */
+.md-sidebar {
+    height: auto;
 } 
