@@ -1,0 +1,95 @@
+site_name: Frontend Development Notes
+site_description: Frontend Development Learning Notes and Documentation
+site_author: Yalin(Eric) Yang
+site_url: https://gisyaliny.github.io/Frontend/
+copyright: "Copyright &copy; 2024 - 2025 Yalin Yang"
+
+# Repository
+repo_name: gisyaliny/Frontend
+repo_url: https://github.com/gisyaliny/Frontend
+
+# Configuration
+theme:
+    language: en
+    name: material
+    palette:
+        - scheme: default
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.top
+        - navigation.sections
+        - search.highlight
+        - search.share
+    font:
+        text: Google Sans
+        code: Regular
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/gisyaliny/Frontend
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/gisyaliny/
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+    - admonition
+    - abbr
+    - attr_list
+    - def_list
+    - footnotes
+    - meta
+    - md_in_html
+    - pymdownx.details
+    - pymdownx.mark
+    - pymdownx.superfences
+    - pymdownx.highlight:
+          linenums: true
+    - toc:
+          permalink: true
+  
+plugins:
+    - search
+    - git-revision-date
+    - open-in-new-tab
+    - git-revision-date-localized:
+          enable_creation_date: true
+          type: timeago
+
+nav:
+    - Home: index.md
+    - JavaScript:
+        - Basics: "javascript/basics.md"
+        - ES6+: "javascript/es6.md"
+        - DOM Manipulation: "javascript/dom.md"
+    - Frameworks:
+        - React:
+            - Introduction: "frameworks/react/intro.md"
+            - Components: "frameworks/react/components.md"
+            - Hooks: "frameworks/react/hooks.md"
+        - Vue:
+            - Introduction: "frameworks/vue/intro.md"
+            - Components: "frameworks/vue/components.md"
+    - CSS:
+        - Basics: "css/basics.md"
+        - Flexbox: "css/flexbox.md"
+        - Grid: "css/grid.md"
+    - Tools:
+        - Webpack: "tools/webpack.md"
+        - Babel: "tools/babel.md"
+        - Git: "tools/git.md"
