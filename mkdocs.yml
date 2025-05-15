@@ -31,9 +31,14 @@ theme:
         - navigation.sections
         - search.highlight
         - search.share
+        - content.code.copy
+        - content.code.annotate
     font:
         text: Google Sans
         code: Regular
+
+extra_css:
+    - stylesheets/extra.css
 
 extra:
   social:
@@ -57,9 +62,15 @@ markdown_extensions:
     - md_in_html
     - pymdownx.details
     - pymdownx.mark
-    - pymdownx.superfences
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
     - pymdownx.highlight:
           linenums: true
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
     - toc:
           permalink: true
   
