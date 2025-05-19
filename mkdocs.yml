@@ -10,30 +10,38 @@ repo_url: https://github.com/gisyaliny/Frontend
 
 # Configuration
 theme:
-    name: material
     language: en
-    features:
-        - navigation.instant
-        - navigation.tracking
-        - navigation.sections
-        - navigation.top
-        - navigation.footer
-        - search.highlight
-        - search.share
-        - content.code.copy
+    logo: assets/YalinYang.png
     palette:
         - scheme: default
-          primary: indigo
+          #   primary: blue
           accent: indigo
           toggle:
-              icon: material/brightness-7
+              icon: material/toggle-switch-off-outline
               name: Switch to dark mode
         - scheme: slate
           primary: indigo
           accent: indigo
           toggle:
-              icon: material/brightness-4
+              icon: material/toggle-switch
               name: Switch to light mode
+    name: material
+    navigation_depth: 3
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.top
+        # - toc.integrate
+        # - navigation.tabs
+        - navigation.sections
+        - search.highlight
+        - search.share
+    # custom_dir: "docs/overrides"
+    font:
+        text: Google Sans
+        code: Regular
 
 extra:
     social:
@@ -73,22 +81,8 @@ plugins:
 
 nav:
     - Home: index.md
-    - JavaScript:
-        - Basics: "javascript/basics.md"
-        - ES6+: "javascript/es6.md"
-        - DOM Manipulation: "javascript/dom.md"
-    - Frameworks:
-        - React:
-            - Introduction: "frameworks/react/intro.md"
-            - Components: "frameworks/react/components.md"
-            - Hooks: "frameworks/react/hooks.md"
-        - Vue:
-            - Introduction: "frameworks/vue/intro.md"
-            - Components: "frameworks/vue/components.md"
-    - CSS:
-        - Basics: "css/basics.md"
-        - Flexbox: "css/flexbox.md"
-        - Grid: "css/grid.md"
+    - ES6:
+        - Core Syntax: "ES6/01-ES6_Core_Syntax.ipynb"
     - Tools:
         - Webpack: "tools/webpack.md"
         - Babel: "tools/babel.md"
