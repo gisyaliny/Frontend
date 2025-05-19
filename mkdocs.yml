@@ -10,80 +10,92 @@ repo_url: https://github.com/gisyaliny/Frontend
 
 # Configuration
 theme:
-    language: en
-    logo: assets/YalinYang.png
-    palette:
-        - scheme: default
-          #   primary: blue
-          accent: indigo
-          toggle:
-              icon: material/toggle-switch-off-outline
-              name: Switch to dark mode
-        - scheme: slate
-          primary: indigo
-          accent: indigo
-          toggle:
-              icon: material/toggle-switch
-              name: Switch to light mode
-    name: material
-    navigation_depth: 3
-    icon:
-        repo: fontawesome/brands/github
-    features:
-        - navigation.instant
-        - navigation.tracking
-        - navigation.top
-        # - toc.integrate
-        # - navigation.tabs
-        - navigation.sections
-        - search.highlight
-        - search.share
-    # custom_dir: "docs/overrides"
-    font:
-        text: Google Sans
-        code: Regular
+  language: en
+  logo: assets/YalinYang.png
+  palette:
+    - scheme: default
+      #   primary: blue
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    # - toc.integrate
+    # - navigation.tabs
+    - navigation.sections
+    - search.highlight
+    - search.share
+  # custom_dir: "docs/overrides"
+  font:
+    text: Google Sans
+    code: Regular
 
 extra:
-    social:
-        - icon: fontawesome/brands/github
-          link: https://github.com/gisyaliny/Frontend
-        - icon: fontawesome/brands/linkedin
-          link: https://www.linkedin.com/in/gisyaliny/
-    generator: false  # Disable "Made with Material for MkDocs" footer text
-
-extra_css:
-    - stylesheets/extra.css
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/gisyaliny/notes
+    # - icon: fontawesome/brands/google-scholar
+    # link: https://scholar.google.com/citations?user=wdkZhlwAAAAJ
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/gisyaliny/
+    # - icon: fontawesome/brands/instagram
+    #   link: https://www.instagram.com/c17hawke/
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js
+  - https://polyfill.io/v3/polyfill.min.js #?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
-    - admonition
-    - attr_list
-    - def_list
-    - footnotes
-    - md_in_html
-    - toc:
-          permalink: true
-    - pymdownx.highlight:
-          anchor_linenums: true
-    - pymdownx.superfences
-    - pymdownx.details
-    - pymdownx.mark
-  
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+  - toc:
+      permalink: true
+
 plugins:
-    - search
-    - git-revision-date-localized:
-          enable_creation_date: true
-          type: timeago
+  - search
+  - mkdocstrings
+  - git-revision-date
+  - open-in-new-tab
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  # - pdf-export
+  - mkdocs-jupyter:
+      include_source: True
+      ignore_h1_titles: True
+      execute: False
+      allow_errors: True
+      ignore: ["name.ipynb"]
+      execute_ignore: ["path/*.ipynb"]
 
 nav:
-    - Home: index.md
-    - ES6:
-        - Core Syntax: "ES6/01-ES6_Core_Syntax.ipynb"
-    - Tools:
-        - Webpack: "tools/webpack.md"
-        - Babel: "tools/babel.md"
-        - Git: "tools/git.md"
+  - Home: index.md
+  - ES6:
+      - Core Syntax: "ES6/01-ES6_Core_Syntax.ipynb"
+  - Tools:
+      - Webpack: "tools/webpack.md"
+      - Babel: "tools/babel.md"
+      - Git: "tools/git.md"
