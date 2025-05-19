@@ -11,6 +11,7 @@ repo_url: https://github.com/gisyaliny/Frontend
 # Configuration
 theme:
   language: en
+  navigation_depth: 2
   logo: assets/YalinYang.png
   palette:
     - scheme: default
