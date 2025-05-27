@@ -96,6 +96,7 @@ nav:
   - Home: index.md
   - ES6:
       - Core Syntax: "ES6/01-ES6_Core_Syntax.ipynb"
+      - Functions: "ES6/02-Functions-Enhancement.ipynb"
   - Tools:
       - Webpack: "tools/webpack.md"
       - Babel: "tools/babel.md"
