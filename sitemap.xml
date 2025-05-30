@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://gisyaliny.github.io/Frontend/</loc>
+         <lastmod>2025-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://gisyaliny.github.io/Frontend/ES6/01-ES6_Core_Syntax/</loc>
+         <lastmod>2025-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://gisyaliny.github.io/Frontend/ES6/02-Functions-Enhancement/</loc>
+         <lastmod>2025-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://gisyaliny.github.io/Frontend/ES6/03-Object-and-Array-Enhancements/</loc>
+         <lastmod>2025-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://gisyaliny.github.io/Frontend/javascript/basics/</loc>
+         <lastmod>2025-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
